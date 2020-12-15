@@ -1,0 +1,30 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "My Gatsby site",
+  "author": "Emil Larsson",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "license": "0BSD",
+  "dependencies": {
+    "gatsby": "^2.26.1",
+    "gatsby-plugin-typography": "^2.8.0",
+    "gatsby-source-contentful": "^4.2.1",
+    "gatsby-transformer-remark": "^2.12.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-typography": "^0.16.19"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
