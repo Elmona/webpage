@@ -33,7 +33,7 @@ exports.createPages = ({ graphql, actions }) => {
           reject(res.errors)
         }
         const pages = res.data.allContentfulWebpage.nodes
-        const layout = res.data.allContentfulLayout?.nodes[0]
+        const layout = res.data.allContentfulLayout.nodes[0]
 
         pages.forEach(page => {
           let slug = page.slug
