@@ -1,11 +1,12 @@
 {
-  "name": "test",
+  "name": "webpage",
   "version": "1.0.0",
   "private": true,
-  "description": "My Gatsby site",
+  "description": "See it as wordpress, pretty easy to setup but outstanding performance.",
   "author": "Emil Larsson",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "Contentful"
   ],
   "scripts": {
     "develop": "gatsby develop",
@@ -16,15 +17,20 @@
   },
   "license": "0BSD",
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^14.1.2",
+    "@emotion/react": "^11.1.2",
     "gatsby": "^2.26.1",
+    "gatsby-plugin-emotion": "^5.1.0",
     "gatsby-plugin-typography": "^2.8.0",
     "gatsby-source-contentful": "^4.2.1",
     "gatsby-transformer-remark": "^2.12.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
     "react-typography": "^0.16.19"
   },
   "devDependencies": {
+    "contentful-management": "^7.5.0",
     "dotenv": "^8.2.0"
   }
 }

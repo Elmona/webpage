@@ -6,6 +6,7 @@ const contentfulConfig = {
     spaceId: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 }
+
 const { spaceId, accessToken } = contentfulConfig
 
 if (!spaceId || !accessToken) {
@@ -15,13 +16,11 @@ if (!spaceId || !accessToken) {
 }
 
 module.exports = {
-    siteMetadata: {
-        title: `Boiler Buissness Site`,
-    },
     plugins: [
         {
             resolve: `gatsby-source-contentful`,
             options: contentfulConfig
         },
+        'gatsby-plugin-emotion'
     ],
 }
