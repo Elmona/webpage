@@ -9,7 +9,7 @@ const Header = ({ props }) => {
     <Link to='/'>
       <img
         css={css.image}
-        src={props.pageContext.layout.logotype.file.url}
+        // src={props.pageContext.layout.logotype.file.url}
         alt='logotype'
       />
     </Link>
