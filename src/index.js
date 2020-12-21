@@ -1,12 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import RichText from './lib/RichtText'
+import { css } from '@emotion/react'
+import { wrapper } from './FrameWork/GlobalStyles'
 
 const Page = props => {
   const richText = props.data?.contentfulWebpage?.body
 
-  return <div>
-    <h1>{props?.pageContext?.name + ' <<- This should be visually hidden'}</h1>
+  return <div css={wrapper}>
+    <h1 css={css`display: none;`}>{props?.pageContext?.name}</h1>
     {richText && <RichText content={richText} />}
   </div>
 }
