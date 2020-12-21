@@ -2,6 +2,25 @@ import React from 'react'
 import { Global, css } from '@emotion/react'
 import { Helmet } from 'react-helmet'
 
+const medium = `@media (min-width: 768px)`
+const contentWidth = '100rem'
+
+export const wrapper = css`
+  padding: 0rem;
+
+  ${medium} {
+    max-width: ${contentWidth};
+    margin: 0 auto;
+  }
+`
+
+export const expandWidth = css`
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding-left: +50vw;
+  padding-right: +50vw;
+`
+
 const headings = css`
   h1 {
     font-size: 3rem;
@@ -11,7 +30,7 @@ const headings = css`
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     line-height: 3rem;
   }
 
@@ -21,6 +40,8 @@ const headings = css`
   }
 
   p {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
     font-size: 2rem;
     line-height: 3rem;
   }

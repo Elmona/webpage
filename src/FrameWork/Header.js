@@ -1,24 +1,40 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import * as css from './Header.css'
+import { expandWidth, wrapper } from './GlobalStyles'
 
 const Header = ({ props }) => {
-  console.log(props)
+  const url = props.pageContext?.layout?.logotype.file?.url
 
-  return <header>
+  return <header css={wrapper}>
     <Link to='/'>
-      <img
-        css={css.image}
-        // src={props.pageContext.layout.logotype.file.url}
-        alt='logotype'
-      />
+      <picture>
+        <source
+          srcSet={`${url}?fm=webp&w=200`}
+          media='(max-width: 500px)'
+          width='200'
+          height='45'
+          css={css.image}
+        />
+        <source
+          srcSet={`${url}?fm=webp`}
+          width='350'
+          header='78'
+          css={css.image}
+        />
+        <img
+          src={url}
+          alt='logotype'
+          css={css.image}
+        />
+      </picture>
     </Link>
-    <nav css={css.navigation}>
+    <nav css={[css.navigation, expandWidth]}>
       <li>
         <ul>
           <Link to='/'
             activeClassName='active'
-          >Hem</Link>
+          >Start</Link>
         </ul>
         <ul><Link to='/emma'>Emma</Link></ul>
         <ul><Link to='/about'>About</Link></ul>

@@ -1,8 +1,5 @@
 import { css } from '@emotion/react'
 
-export const activePage = css`
-  background-color: blue;
-`
 export const navigation = css`
   background-color: #4e9a6a;
 
