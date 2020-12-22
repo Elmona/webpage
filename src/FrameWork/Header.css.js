@@ -9,11 +9,19 @@ export const navigation = css`
 
     ul {
       display: flex;
-      padding: 1rem 2rem 1rem;
+      padding: 0rem 2rem 0rem;
       a {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        line-height: 4rem;
         text-decoration: none;
-        font-size: 2rem;
+        font-size: 2.5rem;
         color: white;
+      }
+      a:hover {
+        text-decoration: underline;
       }
     }
 

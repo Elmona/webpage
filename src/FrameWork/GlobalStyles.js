@@ -14,6 +14,11 @@ export const wrapper = css`
   }
 `
 
+export const maxTextWidth = css`
+  max-width: 80rem;
+  margin-left: 1rem;
+`
+
 export const expandWidth = css`
   margin-left: -50vw;
   margin-right: -50vw;
@@ -30,8 +35,9 @@ const headings = css`
   }
 
   h2 {
-    font-size: 4rem;
+    font-size: 5rem;
     line-height: 3rem;
+    margin-top: 2rem;
   }
 
   h3 {
