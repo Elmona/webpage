@@ -28,7 +28,7 @@ const Logo = ({ url }) => <Link to='/'>
 </Link>
 
 const Header = ({ props }) => {
-  const url = props.pageContext?.layout?.logotype.file?.url
+  const url = props.pageContext?.layout?.logotype?.file?.url
   const pages = props?.pageContext?.navigation
   const tree = makeTree(pages).sort((a, b) => b.order - a.order)
 

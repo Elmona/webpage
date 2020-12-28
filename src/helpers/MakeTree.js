@@ -1,5 +1,8 @@
 
 export const makeTree = data => {
+  if (data === undefined)
+    return []
+
   const base = { children: [] }
 
   for (const node of data) {
