@@ -1,16 +1,8 @@
-
-import React from 'react'
 import { css } from '@emotion/react'
+import { medium } from '../FrameWork/GlobalStyles'
 
 export const heading = css`
   align-self: center;
-`
-
-export const largeImage = css`
-  position: relative;
-  top: -2rem;
-  left: 50%;
-  transform: translateX(-50%);
 `
 
 export const box = css`
@@ -32,7 +24,11 @@ export const cover = url => css`
   position: relative;
   background-size: cover;
   top: -2rem;
-  background-image:url(${url}?w=800);
-  height: 30rem;
-
+  background-image: none;
+  flex-direction: column;
+  ${medium} {
+    height: 30rem;
+    background-image:url(${url}?fm=webp&w=800);
+    flex-direction: row;
+  }
 `

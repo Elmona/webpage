@@ -20,14 +20,30 @@ export default Page
 export const pageQuery = graphql`
   query Webpage($slug: String!) {
     contentfulWebpage(slug: {eq: $slug}) {
-      name
       headline
       slug
       body {
         raw
         __typename
         references {
+          ... on ContentfulPerson {
+            __typename
+            contentful_id
+            name
+            picture {
+              description
+              file {
+                url
+              }
+            }
+            text {
+              text
+            }
+            quote
+          }
           ... on ContentfulCallToActions {
+            __typename
+            contentful_id
             image {
               alt
               url {
@@ -36,8 +52,6 @@ export const pageQuery = graphql`
                 }
               }
             }
-            contentful_id
-            __typename
             title
             list {
               title

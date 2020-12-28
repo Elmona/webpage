@@ -2,8 +2,8 @@ import React from 'react'
 import { Global, css } from '@emotion/react'
 import { Helmet } from 'react-helmet'
 
-const medium = `@media (min-width: 768px)`
-const contentWidth = '100rem'
+export const medium = `@media (min-width: 768px)`
+export const contentWidth = '100rem'
 
 export const wrapper = css`
   padding: 0rem;
@@ -35,14 +35,16 @@ const headings = css`
   }
 
   h2 {
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 3rem;
     margin-top: 2rem;
+    margin-bottom: 3rem;
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: 2.5rem;
+    margin-bottom: 3rem;
   }
 
   p {
@@ -80,14 +82,16 @@ const resetStyles = css`
     padding: 0;
     border: 0;
     font-size: 65%;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Open Sans', sans-serif;
     vertical-align: baseline;
   }
 `
 
 const FontLoader = () => <Helmet>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  {/* <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" /> */}
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet" />
 </Helmet>
 
 const GlobalStyles = () => <><Global

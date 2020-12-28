@@ -10,8 +10,9 @@ exports.createPages = ({ graphql, actions }) => {
       {
         allContentfulWebpage {
           nodes {
-            name
+            headline
             slug
+            order
           }
         }
         allContentfulLayout(limit: 1) {
@@ -38,7 +39,7 @@ exports.createPages = ({ graphql, actions }) => {
         pages.forEach(page => {
           let slug = page.slug
           console.log(slug)
-          if (page.slug === 'index') {
+          if (page.slug === '/index') {
             slug = '/'
           }
 
@@ -46,6 +47,7 @@ exports.createPages = ({ graphql, actions }) => {
             path: slug,
             component: pageComponent,
             context: {
+              navigation: pages,
               layout: layout,
               slug: page.slug,
               name: page.name
