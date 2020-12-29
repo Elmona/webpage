@@ -11,7 +11,7 @@ const Header = ({ props }) => {
   const pages = props?.pageContext?.navigation
   const tree = makeTree(pages).sort((a, b) => b.order - a.order)
 
-  const [menuOpen, setMenuOpen] = useState(true)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     window.matchMedia(`(min-width: ${minWidth})`).addEventListener('change', e => {
@@ -28,17 +28,23 @@ const Header = ({ props }) => {
         role='img'
         onClick={() => setMenuOpen(!menuOpen)}
         title='Burger menu'
+        style={css.burger}
       />
       <ul>
         {tree.map(page => <li key={page.slug}>
           <Link
             activeClassName='active'
-            to={page.slug === '/index' ? '/' : page.slug}>
-            {page.headline}</Link>
+            to={page.slug === '/index' ? '/' : page.slug}
+            onClick={() => setMenuOpen(false)}
+          >{page.headline}</Link>
           {page.children.length > 0 &&
             <ul css={css.sublist}>
               {page.children.map(subpage => <li key={subpage.slug}>
-                <Link to={subpage.slug} activeClassName='active'>{subpage.headline}</Link>
+                <Link
+                  to={subpage.slug}
+                  activeClassName='active'
+                  onClick={() => setMenuOpen(false)}
+                >{subpage.headline}</Link>
               </li>)}
             </ul>}
         </li>

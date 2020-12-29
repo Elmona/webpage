@@ -52,6 +52,7 @@ export const navigation = css`
     }
   }
 `
+
 export const menuOpen = css`
   display: flex;
   flex-direction: column;
@@ -73,6 +74,10 @@ export const menuOpen = css`
       }
     }
   }
+`
+
+export const burger = css`
+  padding: 1rem 0rem 1rem 2rem;
 `
 
 export const sublist = css`

@@ -18,8 +18,8 @@ export const wrapper = css`
 
 export const maxTextWidth = css`
   max-width: 80rem;
-  margin-left: 1.6rem;
-  margin-right: 1.6rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 `
 
 export const expandWidth = css`
