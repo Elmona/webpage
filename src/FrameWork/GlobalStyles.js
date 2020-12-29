@@ -2,8 +2,10 @@ import React from 'react'
 import { Global, css } from '@emotion/react'
 import { Helmet } from 'react-helmet'
 
-export const medium = `@media (min-width: 768px)`
 export const contentWidth = '100rem'
+export const minWidth = '768px'
+
+export const medium = `@media (min-width: ${minWidth})`
 
 export const wrapper = css`
   padding: 0rem;
@@ -16,7 +18,8 @@ export const wrapper = css`
 
 export const maxTextWidth = css`
   max-width: 80rem;
-  margin-left: 1rem;
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
 `
 
 export const expandWidth = css`
@@ -27,31 +30,59 @@ export const expandWidth = css`
 `
 
 const headings = css`
+  h1, h2 {
+    margin-bottom: 1.6rem;
+  }
+
+  h3, h4, h5, h6 {
+    margin-bottom: .8rem;
+  }
+
+  h2, h3 {
+    margin-top: 3.2rem;
+  }
+
   h1 {
-    font-size: 3rem;
-    line-height: 2.5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+
+    ${medium} {
+      font-size: 4.8rem;
+      line-height: 5.6rem;
+    }
   }
 
   h2 {
-    font-size: 4rem;
-    line-height: 3rem;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+
+    ${medium} {
+      font-size: 3.4rem;
+      line-height: 4.8rem;
+    }
   }
 
   h3 {
-    font-size: 3rem;
-    line-height: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 2rem;
+    line-height: 3.2rem;
+
+    ${medium} {
+      font-size: 2.8rem;
+    }
+  }
+  
+  h4 {
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    ${medium} {
+      font-size: 2.4rem;
+    }
   }
 
   p {
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
-    font-size: 2rem;
-    line-height: 3rem;
+    margin-bottom: 1.8rem;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
   }
   
   a {
@@ -82,7 +113,6 @@ const resetStyles = css`
     padding: 0;
     border: 0;
     font-size: 65%;
-    /* font-family: 'Roboto', sans-serif; */
     font-family: 'Open Sans', sans-serif;
     vertical-align: baseline;
   }
@@ -90,7 +120,6 @@ const resetStyles = css`
 
 const FontLoader = () => <Helmet>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  {/* <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" /> */}
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet" />
 </Helmet>
 

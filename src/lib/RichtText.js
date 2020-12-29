@@ -1,4 +1,5 @@
 import React from 'react'
+import { css } from '@emotion/react'
 import { BLOCKS, MARKS } from '@contentful/rich-text-types'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { maxTextWidth } from '../FrameWork/GlobalStyles'
@@ -6,7 +7,7 @@ import { maxTextWidth } from '../FrameWork/GlobalStyles'
 import CallToActions from '../Components/CallToActions'
 import Person from '../Components/Person'
 
-const Bold = ({ children }) => <span className='bold'>{children}</span>
+const Bold = ({ children }) => <p css={css`font-weight: 700;`}>{children}</p>
 
 const options = {
   renderMark: {

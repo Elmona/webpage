@@ -8,8 +8,6 @@ export const wrapper = css`
 `
 
 export const quote = css`
-  border-left: 2px solid;
+  border-left: 4px solid red;
   padding-left: 1rem;
-
-
 `

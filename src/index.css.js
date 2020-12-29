@@ -11,5 +11,6 @@ export const hiddenH1 = css`
 export const innerWrapper = css`
   min-height: 40rem;
   padding-top: 2rem;
+  padding-bottom: 4rem;
   margin-bottom: -1.5rem;
 `
