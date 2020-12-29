@@ -1,11 +1,33 @@
 import { css } from '@emotion/react'
+import { medium } from '../FrameWork/GlobalStyles'
 
 export const navigation = css`
   background-color: #4e9a6a;
+  display: flex;
+  justify-content: flex-end;
+
+  svg {
+    padding-right: 1rem;
+    fill: #fff;
+  }
+
+  ${medium} {
+    svg {
+      display: none;
+      width: 0px;
+      height: 0px;
+    }
+  }
 
   ul {
-    display: flex;
-    justify-content: space-around;
+    display: none;
+    justify-content: flex-end;
+
+    ${medium} {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
 
     li {
       display: flex;
@@ -30,13 +52,31 @@ export const navigation = css`
     }
   }
 `
+export const menuOpen = css`
+  display: flex;
+  flex-direction: column;
 
-export const sublist = css`
-  display: none !important;
+  svg {
+    align-self: flex-end;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    
+    li {
+      display: flex;
+      flex-direction: column;
+      ul {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
 `
 
-export const image = css`
-  margin-top: .5rem;
-  margin-left: .5rem;
-  margin-bottom: 1rem;
+export const sublist = css`
+  ${medium} {
+    display: none !important;
+  }
 `
