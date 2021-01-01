@@ -1,6 +1,6 @@
 
 # Webpage
-This is a static site generator. The frameworkis are Gatsby, Contentful, Netlifly. The main concept is that the site will have outstanding performance according to WCAG and automatic analysis tools out of the box. You can set up the template in minutes and start coding or just use it as a template sort of like WordPress.
+This is a static site generator. The framework are Gatsby, Contentful, Netlifly. The main concept is that the site will have outstanding performance according to WCAG and automatic analysis tools out of the box. You can set up the template in minutes and start coding or just use it as a template sort of like WordPress.
 
 ## Get Started
 // TODO
