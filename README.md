@@ -14,7 +14,7 @@ npm start
 ```
   
 ## Routing
-Because Contentful has a flat information structure routing is kind of hard. If you google the problem you find a lot of blogs. And when you start thinking about adding more routes it is getting hard.
+Because Contentful has a flat information structure routing is kind of hard. If you google the problem you find a lot of blogs and that is like 10% of routing problems. And when you start thinking about adding more routes it is getting hard.
 
 A lot of CMS has and tree structure of the site and it works kinda well. So I implemented this with contentful. That will make it easy to create advanced routings. And easily add and manage your web content.
   
