@@ -1,6 +1,6 @@
 
 import { css } from '@emotion/react'
-// import { medium } from '../FrameWork/GlobalStyles'
+import { medium } from '../FrameWork/GlobalStyles'
 
 export const wrapper = css`
   display: flex;
@@ -8,7 +8,16 @@ export const wrapper = css`
   padding: 2rem;
   div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    ${medium} {
+      flex-direction: row;
+    }
+
+    picture {
+      background-color: #151b1f;
+      display: flex;
+      justify-content: center;
+    }
     .text {
       display: flex;
       flex-direction:column;
