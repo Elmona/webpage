@@ -82,6 +82,30 @@ export const burger = css`
 
 export const sublist = css`
   ${medium} {
-    display: none !important;
+    position: relative;
+
+    ul {
+      z-index: 100;
+      display: none;
+      position: absolute;
+      background-color: #4e9a6a;
+      flex-direction: column;
+      justify-content: none;
+      margin-top: 6rem;
+      min-width: 23rem;
+      li {
+        padding: 0rem;
+      }
+    }
+  }
+
+  &:hover ul {
+    display: flex;
+    z-index: 100;
+  }
+
+  &:focus-within ul {
+    z-index: 100;
+    display: flex;
   }
 `

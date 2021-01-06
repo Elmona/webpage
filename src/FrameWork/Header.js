@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'gatsby'
 import * as css from './Header.css'
 import { expandWidth, minWidth, wrapper } from './GlobalStyles'
-import { makeTree } from '../helpers/MakeTree'
 import Burger from '../Icons/Burger'
 import Logo from './Logotype'
+import Navigation from './Navigation'
 
 const Header = ({ props }) => {
   const url = props.pageContext?.layout?.logotype?.file?.url
   const pages = props?.pageContext?.navigation
-  const tree = makeTree(pages).sort((a, b) => b.order - a.order)
 
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -31,24 +29,10 @@ const Header = ({ props }) => {
         style={css.burger}
       />
       <ul>
-        {tree.map(page => <li key={page.slug}>
-          <Link
-            activeClassName='active'
-            to={page.slug === '/index' ? '/' : page.slug}
-            onClick={() => setMenuOpen(false)}
-          >{page.headline}</Link>
-          {page.children.length > 0 &&
-            <ul css={css.sublist}>
-              {page.children.map(subpage => <li key={subpage.slug}>
-                <Link
-                  to={subpage.slug}
-                  activeClassName='active'
-                  onClick={() => setMenuOpen(false)}
-                >{subpage.headline}</Link>
-              </li>)}
-            </ul>}
-        </li>
-        )}
+        <Navigation
+          pages={pages}
+          setMenuOpen={setMenuOpen}
+        />
       </ul>
     </nav>
   </header>
